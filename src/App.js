@@ -16,8 +16,10 @@ function App() {
     <Routes>
       <Route exact path='/register' Component={Register}/>
       <Route exact path='/login' Component={Login}/>
-      <Route exact path='/' Component={Home} />
-      <Route exact path="/profile" Component={Profile} />
+      <Route exact path="/" element={<PrivateRoute/>}>
+      <Route exact path="/" element={<Home />} />
+      <Route exact path="/profile" element={<Profile />} />
+      </Route>
     </Routes>
     </BrowserRouter>
     </AuthProvider>

@@ -17,8 +17,8 @@ import { ref, getDownloadURL, uploadBytes } from "firebase/storage";
 import User from "../components/User";
 import MessageForm from "../components/MessageForm";
 import Message from "../components/Message";
-
-const Home = () => {
+  
+  const Home = () => {
   const [users, setUsers] = useState([]);
   const [chat, setChat] = useState("");
   const [text, setText] = useState("");
